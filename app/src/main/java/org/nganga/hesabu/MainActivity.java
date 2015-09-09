@@ -1,17 +1,52 @@
 package org.nganga.hesabu;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    EditText operand1;
+    EditText operand2;
+    Button btnPlus;
+    Button btnSubtract;
+    Button btnDivide;
+    Button btnMultiply;
+    TextView result;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        operand1 = (EditText) findViewById(R.id.editOperand1);
+        operand2 = (EditText) findViewById(R.id.editOperand2);
+
+        btnDivide = (Button) findViewById(R.id.btnDivide);
+        btnSubtract = (Button) findViewById(R.id.btnSubtract);
+        btnMultiply = (Button) findViewById(R.id.btnMultipy);
+        btnPlus = (Button) findViewById(R.id.btnPlus);
+        result = (TextView) findViewById(R.id.textResult);
+
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float oper1 = Float.parseFloat(operand1.getText().toString());
+                float oper2 = Float.parseFloat(operand2.getText().toString());
+
+                float theResult = oper1 + oper2;
+                result.setText(Float.toString(theResult));
+            }
+        });
     }
 
     @Override

@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/editOperand1"
             android:layout_marginTop="20dp"/>
 
         <EditText
@@ -31,20 +31,20 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/editOperand2"
             />
 
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="wrap_contentt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:layout_gravity="center"
             android:gravity="center">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/btnPlus"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="+"/>
@@ -53,21 +53,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:id="@+id/button2"
+                android:id="@+id/btnSubtract"
                 android:layout_column="1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
-                android:id="@+id/button3"
+                android:id="@+id/btnDivide"
                 android:layout_column="2" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="*"
-                android:id="@+id/button4"
+                android:id="@+id/btnMultipy"
                 android:layout_column="3" />
         </TableRow>
 
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0.00"
-            android:id="@+id/textView2"
+            android:id="@+id/textResult"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:gravity="center"/>
