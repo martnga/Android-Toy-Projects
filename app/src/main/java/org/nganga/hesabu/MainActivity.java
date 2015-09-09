@@ -47,6 +47,39 @@ public class MainActivity extends Activity {
                 result.setText(Float.toString(theResult));
             }
         });
+
+        btnSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float oper1 = Float.parseFloat(operand1.getText().toString());
+                float oper2 = Float.parseFloat(operand2.getText().toString());
+
+                float theResult = oper1 - oper2;
+                result.setText(Float.toString(theResult));
+            }
+        });
+
+        btnDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float oper1 = Float.parseFloat(operand1.getText().toString());
+                float oper2 = Float.parseFloat(operand2.getText().toString());
+
+                float theResult = oper1 / oper2;
+                result.setText(Float.toString(theResult));
+            }
+        });
+
+        btnMultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float oper1 = Float.parseFloat(operand1.getText().toString());
+                float oper2 = Float.parseFloat(operand2.getText().toString());
+
+                float theResult = oper1 * oper2;
+                result.setText(Float.toString(theResult));
+            }
+        });
     }
 
     @Override
